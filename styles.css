@@ -1,8 +1,24 @@
-img {
-    width:  200px;
+.title {
+	font-family: Raleway;
+	font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 53.9px;
+	text-align: center;
+	color: #EB6584
 }
 
-body { 
-    text-align: center
-    font-family: Arial;
+
+.heading1 { 
+    font-family: Raleway;
+    font-style: italic;
+    font-size: 20px; 
+    color: #F5A2AB;
+}
+
+a {
+    font-size:16px;
+    color:#EB6584;
+    text-decoration: none;
 }
