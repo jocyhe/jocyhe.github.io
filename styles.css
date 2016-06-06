@@ -21,4 +21,27 @@ a {
     font-size:16px;
     color:#EB6584;
     text-decoration: none;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
 }
+
+.img1 { 
+    margin-top: 50px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.bkfstbio { 
+    color: #EB6584;
+    font-family: Raleway;
+}
+
+.sub { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
