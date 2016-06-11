@@ -1,3 +1,22 @@
+#start {
+    text-align: center;
+    height: 75px;
+    width: 150px;
+}
+
+.frontitle { 
+    text-align: center;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poo {
+    height: 20px;
+    width: 25px;
+}
+
 body {margin:0; padding:0;} /* remove top and left whitespace */
 canvas {display:block;}    /* remove scrollbars */
 canvas:focus {outline:0;} /* remove blue outline around canvas */
