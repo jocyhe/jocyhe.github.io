@@ -1,0 +1,42 @@
+.new-note * {
+    display: block;
+}
+
+.note-date {
+    font-style: italic;
+}
+
+.new-note-title {
+    margin-left: 570px;
+    margin-top: 100px;
+    width: 200px;
+}
+
+.new-notes-content {
+    margin-left: 570px;
+    width: 200px;
+}
+
+.post-new-note {
+    margin-left: 630px;
+}
+
+.old-notes {
+    margin-left: 25px;
+    color: #6186FF;
+}
+
+.hi {
+    text-align: center;
+    font-family: Poiret One;
+    font-weight: 400;
+    font-size: 50px;
+    color: #F779AC;
+}
+
+.intro {
+    text-align: center;
+    font-family: Poiret One;
+    font-size: 35px;
+    color: #FFCCFD
+}
