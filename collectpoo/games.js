@@ -13,7 +13,7 @@ var isGameOver;
 var score;
 
 function preload() {
-    playerImage = loadImage("https://i.imgur.com/cgSqXqs.png");
+    playerImage = loadImage("https://i.imgur.com/ULdOdHs.png");
     pooImage = loadImage("https://i.imgur.com/woiNSUE.png");
     backgroundImage = loadImage("https://i.imgur.com/6HSh05z.jpg");
     enemyImage = loadImage("https://i.imgur.com/J9JjXoX.png");
@@ -90,11 +90,11 @@ function draw() {
             }
             if (enemySprites[i].overlap(player)) {
                 enemySprites[i].remove();
-                score += 1; 
+                score -= 1; 
             }
         }
         
-        if (random()>0.99) {
+        if (random()>0.997) {
             var enemy = createSprite(random()*width);
             enemy.addImage(enemyImage);
             enemy.rotationSpeed = 4.0
@@ -108,8 +108,7 @@ function draw() {
                 bombSprites[i].position.x = random(5, width - 5);
             }
             if (bombSprites[i].overlap(player)) {
-                bombSprites[i].remove();
-                score += 1; 
+                gameOver(true);
             }
         }
         
@@ -128,7 +127,7 @@ function draw() {
             }
             if (moneySprites[i].overlap(player)) {
                 moneySprites[i].remove();
-                score += 1; 
+                score += 10; 
             }
         }
         
