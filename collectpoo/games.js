@@ -30,16 +30,13 @@ function setup() {
 
     player = createSprite(width / 2, height - (playerImage.height / 2), 0, 0);
     player.addImage(playerImage);
-    poo = createSprite(width / 2, 0, 0, 0);
-    poo.addImage(pooImage);
     enemy = createSprite(width / 2, 0, 0, 0);
     enemy.addImage(enemyImage);
     bomb = createSprite(width / 2, 0, 0, 0);
     bomb.addImage(bombImage);
     money = createSprite(width / 2, 0, 0, 0);
     money.addImage(moneyImage);
-    
-    poo.rotationSpeed = 3.0;
+
     enemy.rotationSpeed = 4.0;
     bomb.rotationSpeed = 5.0;
     money.rotationSpeed = 5.0;
@@ -64,54 +61,82 @@ function draw() {
         if (keyDown(LEFT_ARROW) && player.position.x > (playerImage.width / 2)) {
             player.position.x -= 4;
         }
-
-        pooSprites.position.y = pooSprites.position.y + height / 500;
-        if (pooSprites.position.y > height) {
-            pooSprites.position.y = 0;
-            pooSprites.position.x = random(5, width - 5);
+        
+        for (var i = 0; i < pooSprites.length; i++) {
+            console.log(pooSprites[i].position.y);
+            pooSprites[i].position.y = pooSprites[i].position.y + height / 500;
+            if (pooSprites[i].position.y > height) {
+                pooSprites[i].position.y = 0;
+                pooSprites[i].position.x = random(5, width - 5);
+            }
+            if (pooSprites[i].overlap(player)) {
+                pooSprites[i].remove();
+                score += 1; 
+            }
         }
+        
         if (random()>0.99) {
-            var poo = createSprite;
+            var poo = createSprite(random()*width);
             poo.addImage(pooImage);
+            poo.rotationSpeed = 3.0
             pooSprites.add(poo);
         }
         
-        enemy.position.y = enemy.position.y + height / 300;
-        if (enemy.position.y > height) {
-            enemy.position.y = 0;
-            enemy.position.x = random(5, width - 5);
+        for (var i = 0; i < enemySprites.length; i++) {
+            enemySprites[i].position.y = enemySprites[i].position.y + height / 500;
+            if (enemySprites[i].position.y > height) {
+                enemySprites[i].position.y = 0;
+                enemySprites[i].position.x = random(5, width - 5);
+            }
+            if (enemySprites[i].overlap(player)) {
+                enemySprites[i].remove();
+                score += 1; 
+            }
         }
         
-        bomb.position.y = bomb.position.y + height / 300;
-        if (bomb.position.y > height) {
-            bomb.position.y = 0;
-            bomb.position.x = random(5, width - 5);
+        if (random()>0.99) {
+            var enemy = createSprite(random()*width);
+            enemy.addImage(enemyImage);
+            enemy.rotationSpeed = 4.0
+            enemySprites.add(enemy);
         }
         
-        money.position.y = money.position.y + height / 300;
-        if (money.position.y > height) {
-            money.position.y = 0;
-            money.position.x = random(5, width - 5);
+        for (var i = 0; i < bombSprites.length; i++) {
+            bombSprites[i].position.y = bombSprites[i].position.y + height / 500;
+            if (bombSprites[i].position.y > height) {
+                bombSprites[i].position.y = 0;
+                bombSprites[i].position.x = random(5, width - 5);
+            }
+            if (bombSprites[i].overlap(player)) {
+                bombSprites[i].remove();
+                score += 1; 
+            }
         }
         
-         if (poo.overlap(player)){
-            isGameOver = false;
-            score += 1;
-        }
-
-        if (enemy.overlap(player)) {
-            isGameOver = false;
-            score -= 5
+        if (random()>0.998) {
+            var bomb = createSprite(random()*width);
+            bomb.addImage(bombImage);
+            bomb.rotationSpeed = 5.0
+            bombSprites.add(bomb);
         }
         
-        if (bomb.overlap(player)) {
-            isGameOver = true;
+        for (var i = 0; i < moneySprites.length; i++) {
+            moneySprites[i].position.y = moneySprites[i].position.y + height / 500;
+            if (moneySprites[i].position.y > height) {
+                moneySprites[i].position.y = 0;
+                moneySprites[i].position.x = random(5, width - 5);
+            }
+            if (moneySprites[i].overlap(player)) {
+                moneySprites[i].remove();
+                score += 1; 
+            }
         }
         
-        if (money.overlap(player)) {
-            isGameOver = false;
-            score += 10
-            money.remove();
+        if (random()>0.9999) {
+            var money = createSprite(random()*width);
+            money.addImage(moneyImage);
+            money.rotationSpeed = 4.5
+            moneySprites.add(money);
         }
         
         drawSprites();
