@@ -6,14 +6,19 @@
         <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src=jscolor.js></script>
+        <script type="text/javascript" src="colorpicker.js"></script>
+        <style type="text/css">
+                #picker { width: 200px; height: 200px }
+                #slide { width: 30px; height: 200px }
+        </style>
     </head>
     <body>
         <div id="controls">
             <button id="saveDrawing">Save to Computer</button>
             <button id="clearDrawing">Delete Drawing</button>
-            <button class="jscolor">Pick Your Color</button>
         </div>
+        <div id="picker"></div>
+        <div id="slide"></div>
         <script src="main.js"></script>
     </body>
 </html>
