@@ -14,11 +14,11 @@ var score;
 
 function preload() {
     playerImage = loadImage("https://i.imgur.com/ULdOdHs.png");
-    pooImage = loadImage("https://i.imgur.com/woiNSUE.png");
+    pooImage = loadImage("https://i.imgur.com/wzW5iR5.png ");
     backgroundImage = loadImage("https://i.imgur.com/6HSh05z.jpg");
-    enemyImage = loadImage("https://i.imgur.com/J9JjXoX.png");
-    bombImage = loadImage("https://i.imgur.com/mfs7WRh.png")
-    moneyImage = loadImage("https://i.imgur.com/zi7ILXo.png")
+    enemyImage = loadImage("https://i.imgur.com/WZFuqBU.png");
+    bombImage = loadImage("https://i.imgur.com/Uy5UdDI.png ")
+    moneyImage = loadImage("https://i.imgur.com/sVK0Tx2.png")
 
 }
 
@@ -75,7 +75,7 @@ function draw() {
             }
         }
         
-        if (random()>0.99) {
+        if (random()>0.998) {
             var poo = createSprite(random()*width);
             poo.addImage(pooImage);
             poo.rotationSpeed = 3.0

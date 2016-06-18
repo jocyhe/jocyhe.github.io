@@ -1,3 +1,17 @@
+.h {
+    font-size: 100px;
+    text-align: center !important;
+    color: #757D80;
+    margin-left: 500px;
+    
+}
+
+.p { 
+    text-align: center; 
+    font-size: 20px; 
+    color: #8C9496;
+}
+
 body {
     margin: 0;
 }
@@ -5,4 +19,30 @@ body {
 #slide { 
     margin-top: -200px;
     margin-left: 200px;
+    position: relative;
+    width: 600px;
+    height:400px;
 }
+
+#defaultCanvas0 { 
+    margin-left:650px;
+    margin-top: -150px;
+}
+
+.colors {
+    margin-left:250px;
+    margin-top: 100px;
+}
+
+#controls { 
+    margin-top: 50px;
+    margin-left: 555px;
+}
+
+
+
+
+
+
+
+

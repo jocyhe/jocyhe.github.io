@@ -13,7 +13,7 @@
  var points = [];
  
  function setup() {
-    var canvas = createCanvas($(document).width(),$(document).height()-39);
+    var canvas = createCanvas(300, 245);
     background(255);
     ColorPicker(
                     document.getElementById('slide'),

@@ -35,7 +35,7 @@ function draw() {
         fill(255);
         textAlign(CENTER);
         text("Your Score Was:" + score, camera.position.x, camera.position.y - 20);
-        text("Game Over! Click Anywhere to Restart!", camera.position.x, camera.position.y);
+        text("Game Over! Refresh to Restart!", camera.position.x, camera.position.y);
     } else {
     
 
